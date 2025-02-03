@@ -1,6 +1,6 @@
 
 
-const backendDomain = "http://localhost:8080"
+const backendDomain = "https://ai-webdeveloper-backend.onrender.com/"
 
 const SummaryApi ={
     login:{
