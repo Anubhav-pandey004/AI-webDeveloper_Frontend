@@ -1,0 +1,7 @@
+.scrollbar-none::-webkit-scrollbar{
+    display: none;
+}
+.message-box{
+    scroll-behavior: smooth;
+    
+}
