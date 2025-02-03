@@ -1,6 +1,6 @@
 
 
-const backendDomain = "https://ai-webdeveloper-backend.onrender.com/"
+const backendDomain = "https://ai-webdeveloper-backend.onrender.com"
 
 const SummaryApi ={
     login:{
