@@ -210,8 +210,7 @@ const ProjectDetails = () => {
       toast.error(result.message);
     }
   };
-  
-console.log("Response by AI :/n",aiResponse)
+  console.log("hii   ",aiResponse);
   return (
     <main className="h-full w-screen flex relative overflow-hidden">
       <section
