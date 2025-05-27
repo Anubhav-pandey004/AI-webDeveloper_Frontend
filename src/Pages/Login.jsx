@@ -27,8 +27,6 @@ const Login = () => {
     
         const data=await dataResponse.json()
         localStorage.setItem('token', JSON.stringify(data.data));
-
-        console.log(data);
         
         if(data.success){
           toast.success(data.message)

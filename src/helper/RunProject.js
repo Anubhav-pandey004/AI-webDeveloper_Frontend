@@ -81,7 +81,7 @@ const RunProject = async ({
     // Install dependencies for frontend if it exists in the file tree
 
     if (frontendExists) {
-      console.log("Installing frontend dependencies...");
+      
       terminal.write("Installing frontend dependencies...\n");
       const frontendInstallProcess = await webContainer?.spawn(
         "npm",
@@ -93,14 +93,12 @@ const RunProject = async ({
       terminal.write(
         "Frontend directory not found in file tree, skipping frontend dependencies installation.\n"
       );
-      console.log(
-        "Frontend directory not found in file tree, skipping frontend dependencies installation."
-      );
+
     }
 
     // Install dependencies for backend if it exists in the file tree
     if (backendExists) {
-      console.log("Installing backend dependencies...");
+      
       terminal.write("Installing backend dependencies...\n");
       const backendInstallProcess = await webContainer?.spawn(
         "npm",
@@ -113,16 +111,14 @@ const RunProject = async ({
         "Backend directory not found in file tree, skipping backend dependencies installation.\n"
       );
 
-      console.log(
-        "Backend directory not found in file tree, skipping backend dependencies installation."
-      );
+
     }
 
     // Build frontend if buildCommand exists and frontend directory exists
 
     if (frontendExists && frontendBuildCmd.length) {
       terminal.write("Building frontend...\n");
-      console.log("Building frontend...");
+      
       const frontendBuildProcess = await webContainer?.spawn(
         frontendBuildCmd[0],
         frontendBuildCmd.slice(1),
@@ -134,7 +130,7 @@ const RunProject = async ({
     // Build backend if buildCommand exists and backend directory exists
     if (backendExists && backendBuildCmd.length) {
       terminal.write("Building backend...\n");
-      console.log("Building backend...");
+    
       const backendBuildProcess = await webContainer?.spawn(
         backendBuildCmd[0],
         backendBuildCmd.slice(1),
@@ -152,8 +148,6 @@ const RunProject = async ({
     let frontendRunProcess;
     if (frontendExists) {
       terminal.write("Starting frontend server...\n");
-
-      console.log("Starting frontend server...");
       frontendRunProcess = await webContainer?.spawn(
         frontendStartCmd[0],
         frontendStartCmd.slice(1),
@@ -172,7 +166,6 @@ const RunProject = async ({
     // Start backend server if it exists
     let backendRunProcess;
     if (backendExists) {
-      console.log("Starting backend server...");
       terminal.write("Starting backend server...\n");
 
       backendRunProcess = await webContainer?.spawn(
@@ -195,15 +188,15 @@ const RunProject = async ({
 
     webContainer?.on("server-ready", (port, url) => {
       terminal.write(`Server is ready on port ${port}: ${url}\n`);
-      console.log(`Server is ready on port ${port}: ${url}`);
+      
 
       if (port != 3000) {
         terminal.write("Frontend detected!\n");
-        console.log("Frontend detected!");
+        
         setiFrameURL(url); // Set the frontend URL
       } else {
         terminal.write("Backend detected!\n");
-        console.log("Backend detected!");
+        
         setiFrameURL(url);
       }
     });

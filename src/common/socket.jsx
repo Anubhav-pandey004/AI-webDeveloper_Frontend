@@ -18,7 +18,7 @@ export const initializeSocket = (projectId) => {
         });        
 
         socketInstance.on('connection', () => {
-            console.log('Connected to server');
+
         });
 
         socketInstance.on('project-message-receive', (data) => {

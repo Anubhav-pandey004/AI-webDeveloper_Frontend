@@ -73,7 +73,6 @@ const ProjectDetails = () => {
     if (!webContainer) {
       getWebContainer().then((container) => {
         setWebContainer(container);
-        console.log("container started");
       });
     }
 
@@ -96,7 +95,6 @@ const ProjectDetails = () => {
           console.warn("postcss.config.js not found!");
         }
 
-        console.log("Proper update \n", temp);
 
         setAiResponse(temp);
 
@@ -132,7 +130,6 @@ const ProjectDetails = () => {
       user: Currentuser,
       fileTree: aiResponse?.fileTree || project?.fileTree,
     };
-    console.log("Sending message", data);
     sendMessage("project-message", data);
     appendOutgoingMessage(data);
     setMessage(""); // Clear input field
@@ -194,7 +191,6 @@ const ProjectDetails = () => {
 
     const result = await dataResponse.json();
     setMessage("@ai " + result.data);
-    console.log("Enhanced promt is \n", result);
     setMagicLoader(false);
   };
   const HandleDownloade = async (ProjectId) => {
@@ -214,7 +210,7 @@ const ProjectDetails = () => {
       toast.error(result.message);
     }
   };
-  console.log("Ai Response \n", aiResponse?.fileTree);
+  
 
   return (
     <main className="h-full w-screen flex relative overflow-hidden">
