@@ -11,7 +11,7 @@ const FileTree = ({ tree, path = "", toggleFolder, openFolders, setOpenFiles, se
               {isFolder ? (
                 <>
                   <button className="w-full flex items-center" onClick={() => toggleFolder(fullPath)}>
-                    <p className="cursor-pointer font-semibold text-sm md:text-lg text-slate-700 hover:bg-slate-400 hover:text-white p-2 px-2 rounded-md w-full flex">
+                    <p className="cursor-pointer font-semibold text-white text-sm md:text-lg  hover:bg-[#2c364e] hover:text-white p-2 px-2 rounded-md w-full flex">
                       <span className="mr-2">{openFolders[fullPath] ? "📂" : "📁"}</span>
                       {key}
                     </p>
@@ -35,7 +35,7 @@ const FileTree = ({ tree, path = "", toggleFolder, openFolders, setOpenFiles, se
                     setCurrentFile(fullPath);
                   }}
                 >
-                  <p className="cursor-pointer font-semibold text-sm md:text-lg text-slate-700 hover:bg-slate-400 hover:text-white p-2 px-2 rounded-md w-full flex">
+                  <p className="cursor-pointer font-semibold text-sm md:text-lg text-white hover:bg-[#2c364e] hover:text-white p-2 px-2 rounded-md w-full flex">
                     <span className="mr-2">📄</span>
                     {key}
                   </p>

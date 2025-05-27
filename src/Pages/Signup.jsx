@@ -37,10 +37,11 @@ const Signup = () => {
             toast.error('An error occurred during signup.');
         }
     };
+    
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-            <div className="w-full max-w-md p-8 space-y-6 bg-gray-800 rounded-lg shadow-lg">
+        <div className="min-h-screen flex items-center justify-center bg-[#001021] text-white">
+            <div className="w-full max-w-md p-8 space-y-6 bg-[#000f1e] border-2 border-[#3C445C]  rounded-lg shadow-lg">
                 <h2 className="text-3xl font-semibold text-center">Sign Up</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -99,7 +100,7 @@ const Signup = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-white"
+                        className="w-full py-3 bg-gradient-to-r from-[#65e3ff] to-blue-500 hover:scale-105 rounded-lg font-semibold text-white"
                     >
                         Sign Up
                     </button>

@@ -17,7 +17,6 @@ const  ProjectInfo = async (pro)=>{
         });
   
         const result = await dataResponse.json();
-        console.log("refetch ",result);
         
         return result
       } catch (error) {

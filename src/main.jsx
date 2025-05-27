@@ -16,7 +16,7 @@ import Signup from './Pages/Signup.jsx';
 import Home from './Pages/Home.jsx';
 import ProjectDetails from './Pages/ProjectDetails.jsx';
 import UserAuth from './common/UserAuth.jsx';
-
+import PageNotFound from './Pages/PageNotFound.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path:"*",
-        element:<h1>404 Not Found</h1>
+        element:<PageNotFound/>
       }
     ]
   }

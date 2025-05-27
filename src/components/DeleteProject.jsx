@@ -3,7 +3,6 @@ import SummaryApi from "../common";
 
 const DeleteProject = ({ project, setDeletePopup, deletePopup }) => {
   const deleteProject = async () => {
-    console.log("hh");
     
     const response = await fetch(SummaryApi.deleteProject.url, {
       method: SummaryApi.deleteProject.method,

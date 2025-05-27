@@ -46,6 +46,14 @@ const SummaryApi ={
     deleteProject:{
         url: `${backendDomain}/deleteProject`,
         method:"post",
+    },
+    enhance:{
+        url:`${backendDomain}/enhance`,
+        method:"post",
+    },
+    export:{
+        url:`${backendDomain}/export`,
+        method:"post",
     }
 }
 export default SummaryApi

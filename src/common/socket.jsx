@@ -22,7 +22,7 @@ export const initializeSocket = (projectId) => {
         });
 
         socketInstance.on('project-message-receive', (data) => {
-            
+
         });
     }
     return socketInstance;

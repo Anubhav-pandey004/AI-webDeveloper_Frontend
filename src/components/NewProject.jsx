@@ -21,7 +21,6 @@ const PopupComponent = ({ onClose , Projects}) => {
             // users: [user._id]
             owner:user._id
         };
-        console.log(projectData);
         
         try {
             const dataResponse = await fetch(SummaryApi.createProject.url, {
@@ -34,7 +33,6 @@ const PopupComponent = ({ onClose , Projects}) => {
             });
 
             const result = await dataResponse.json();
-            console.log(result);
 
             if (result.success) {
                 toast.success(result.message);

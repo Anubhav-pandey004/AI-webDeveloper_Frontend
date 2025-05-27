@@ -105,7 +105,7 @@ const Collaborator = ({ onClose , project }) => {
         </section>
         <button
           onClick={handleAddCollaborators}
-          className="w-full mt-4 p-2 bg-blue-500 text-white rounded-md"
+          className="w-full mt-4 p-2 bg-gradient-to-r from-[#65e3ff] to-blue-500 hover:scale-105 transition-all text-white rounded-md"
         >
           Add
         </button>
