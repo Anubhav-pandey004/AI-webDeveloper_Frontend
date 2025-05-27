@@ -211,7 +211,7 @@ const ProjectDetails = () => {
     }
   };
   
-
+console.log("Response by AI :/n",aiResponse)
   return (
     <main className="h-full w-screen flex relative overflow-hidden">
       <section
