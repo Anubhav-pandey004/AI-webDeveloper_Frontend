@@ -14,14 +14,9 @@
 
 ![AI Project Generator Demo](./assets/demo.gif)
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; gap: 20px; background: #f9f9f9; padding: 20px;">
-  <img src="public/Screenshot%202025-04-01%20201318.png" width="400" style="margin: 10px;" />
   <img src="public/Screenshot%202025-04-01%20201344.png" width="400" style="margin: 10px;" />
   <img src="public/Screenshot%202025-04-01%20201354.png" width="400" style="margin: 10px;" />
   <img src="public/Screenshot%202025-04-01%20202954.png" width="400" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20203105.png" width="400" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20203124.png" width="400" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20204316.png" width="400" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20204403.png" width="400" style="margin: 10px;" />
 </div>
 
 
