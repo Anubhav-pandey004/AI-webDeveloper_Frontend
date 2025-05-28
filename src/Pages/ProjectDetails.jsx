@@ -193,58 +193,58 @@ const ProjectDetails = () => {
     setMessage("@ai " + result.data);
     setMagicLoader(false);
   };
-//   const HandleDownloade = async (ProjectId, projectName = "Project") => {
-//   try {
-//     const dataResponse = await fetch(SummaryApi.export.url, {
-//       method: SummaryApi.export.method,
-//       credentials: "include",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({ ProjectId }),
-//     });
+  const HandleDownloade = async (ProjectId, projectName = "Project") => {
+  try {
+    const dataResponse = await fetch(SummaryApi.export.url, {
+      method: SummaryApi.export.method,
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ProjectId }),
+    });
 
-//     if (!dataResponse.ok) {
-//       const errorText = await dataResponse.text();
-//       toast.error("Download failed: " + errorText);
-//       return;
-//     }
+    if (!dataResponse.ok) {
+      const errorText = await dataResponse.text();
+      toast.error("Download failed: " + errorText);
+      return;
+    }
 
-//     const blob = await dataResponse.blob();
-//     const url = window.URL.createObjectURL(blob);
+    const blob = await dataResponse.blob();
+    const url = window.URL.createObjectURL(blob);
 
-//     const a = document.createElement("a");
-//     a.href = url;
-//     a.download = `${projectName}.zip`;
-//     document.body.appendChild(a);
-//     a.click();
-//     a.remove();
-//     window.URL.revokeObjectURL(url);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${projectName}.zip`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
 
-//     toast.success("Project downloaded successfully!");
-//   } catch (error) {
-//     console.error("Download error:", error);
-//     toast.error("Something went wrong while downloading the project.");
-//   }
-// };
-  const HandleDownload = async (ProjectId) => {
-  const response = await fetch(SummaryApi.export.url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ ProjectId })
-  });
-
-  const blob = await response.blob();
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `${ProjectId}.zip`;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
+    toast.success("Project downloaded successfully!");
+  } catch (error) {
+    console.error("Download error:", error);
+    toast.error("Something went wrong while downloading the project.");
+  }
 };
+//   const HandleDownload = async (ProjectId) => {
+//   const response = await fetch(SummaryApi.export.url, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({ ProjectId })
+//   });
+
+//   const blob = await response.blob();
+//   const url = window.URL.createObjectURL(blob);
+//   const a = document.createElement("a");
+//   a.href = url;
+//   a.download = `${ProjectId}.zip`;
+//   document.body.appendChild(a);
+//   a.click();
+//   a.remove();
+// };
 
 
   return (
