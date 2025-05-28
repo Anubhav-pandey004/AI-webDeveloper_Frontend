@@ -193,24 +193,41 @@ const ProjectDetails = () => {
     setMessage("@ai " + result.data);
     setMagicLoader(false);
   };
-  const HandleDownloade = async (ProjectId) => {
+  const HandleDownloade = async (ProjectId, projectName = "Project") => {
+  try {
     const dataResponse = await fetch(SummaryApi.export.url, {
       method: SummaryApi.export.method,
       credentials: "include",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ ProjectId }),
     });
 
-    const result = await dataResponse.json();
-    if (result.success) {
-      toast.success(result.message);
-    } else {
-      toast.error(result.message);
+    if (!dataResponse.ok) {
+      const errorText = await dataResponse.text();
+      toast.error("Download failed: " + errorText);
+      return;
     }
-  };
-  console.log("hii   ",aiResponse);
+
+    const blob = await dataResponse.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${projectName}.zip`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
+
+    toast.success("Project downloaded successfully!");
+  } catch (error) {
+    console.error("Download error:", error);
+    toast.error("Something went wrong while downloading the project.");
+  }
+};
+
   return (
     <main className="h-full w-screen flex relative overflow-hidden">
       <section
@@ -406,7 +423,7 @@ const ProjectDetails = () => {
                   <button
                     className="text-[#bfffca] h-7 flex justify-center items-center bg-[#046113] hover:bg-[#04891a] text-lg px-2 absolute right-20 top-3 rounded-md"
                     onClick={() => {
-                      HandleDownloade(project._id);
+                      HandleDownloade(project._id,project.projectName);
                     }}
                   >
                     <GoDownload /> Export
