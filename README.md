@@ -1,55 +1,46 @@
-# 🧠 AI-Powered MERN Stack Project Generator 🌐
+# 🧠 AI-Powered MERN Stack Project Generator 🌐  
+> A real-time AI playground to build full-stack apps from prompts
 
-An AI-based full-stack development playground that lets you generate, run, and debug **MERN stack applications in real-time** — just by entering a prompt.
-
-🚀 Built using **React**, **Node.js**, **Express**, **Socket.IO**, and **OpenAI** (or Gemini) — with custom logic for error detection, local save, and live code correction.
-
----
-
-## ⚙️ Features
-
-- ✨ **Prompt-to-Code Generation**  
-  Generate full MERN stack apps from natural language prompts.
-
-- 🔄 **Real-time Debugging**  
-  Live error detection + AI-based suggestions via WebSockets.
-
-- 💬 **Prompt Enhancer**  
-  Transforms short inputs into detailed prompts for better results.
-
-- 💾 **Save to Local**  
-  Export generated project files directly to your machine.
-
-- 🔐 **JWT-secured WebSockets**  
-  Ensures secure connections during generation and debugging.
-
-- 🌐 **Hosted Frontend + Backend**  
-  Frontend on Vercel, backend on Render.
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+![Vercel](https://img.shields.io/badge/Hosted-Vercel-black?logo=vercel)
+![Render](https://img.shields.io/badge/Backend-Render-blue?logo=render)
+![WebSocket](https://img.shields.io/badge/Live-Debugging-brightgreen?logo=socket.io)
+![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)
 
 ---
 
-## 🛠️ Tech Stack
+## 🎥 Demo
 
-| Tech       | Description                           |
-|------------|---------------------------------------|
-| React.js   | Frontend framework (Vite + Tailwind)  |
-| Node.js    | Backend runtime environment           |
-| Express.js | API server for project interactions   |
-| Socket.IO  | Real-time client-server communication |
-| OpenAI/Gemini | LLM for project generation         |
-| JWT Auth   | Auth for secure WebSocket connections |
+![AI Project Generator Demo](./assets/demo.gif)
+
+> 📸 Want more screenshots? Add them to the `assets/` folder and reference them like above!
 
 ---
 
-## 📦 Installation
+## ✨ Key Features
 
-```bash
-# Clone the repo
-git clone https://github.com/Anubhav-pandey004/AI-webDeveloper_Frontend.git
+- 🔁 Real-time full-stack **code generation** via prompt
+- 🧠 Enhanced prompt transformer for smarter AI results
+- 🐞 Live **error detection and debugging**
+- 💾 Save entire project locally with one click
+- 🔐 **JWT-secured WebSocket** support
+- ☁️ Hosted frontend (Vercel) + backend (Render)
 
-# Install dependencies
-cd ai-mern-generator/client
-npm install
+---
 
-cd ../server
-npm install
+## 📦 Tech Stack
+
+| Layer       | Tech                             |
+|-------------|----------------------------------|
+| Frontend    | React + Tailwind + Vite          |
+| Backend     | Node.js + Express                |
+| Realtime    | Socket.IO                        |
+| Auth        | JWT                              |
+| AI Engine   | OpenAI / Gemini (via REST API)   |
+| Deployment  | Vercel + Render                  |
+
+---
+
+## 📂 Folder Structure
+
