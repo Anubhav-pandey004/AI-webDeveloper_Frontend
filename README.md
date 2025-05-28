@@ -13,7 +13,14 @@
 ## 🎥 Demo
 
 ![AI Project Generator Demo](./assets/demo.gif)
-<img src="public/screenshot1.png" width="600" />
+<img src="public/Screenshot 2025-04-01 201318.png" width="600" />
+<img src="public/Screenshot 2025-04-01 201344.png" width="600" />
+<img src="public/Screenshot 2025-04-01 201354.png" width="600" />
+<img src="public/Screenshot 2025-04-01 202954.png" width="600" />
+<img src="public/Screenshot 2025-04-01 203105.png" width="600" />
+<img src="public/Screenshot 2025-04-01 203124.png" width="600" />
+<img src="public/Screenshot 2025-04-01 204316.png" width="600" />
+<img src="public/Screenshot 2025-04-01 204403.png" width="600" />
 
 
 > 📸 Want more screenshots? Add them to the `assets/` folder and reference them like above!
