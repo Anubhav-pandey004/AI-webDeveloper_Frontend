@@ -442,7 +442,7 @@ const ProjectDetails = () => {
                   <button
                     className="text-[#bfffca] h-7 flex justify-center items-center bg-[#046113] hover:bg-[#04891a] text-lg px-2 absolute right-20 top-3 rounded-md"
                     onClick={() => {
-                      HandleDownloade(project._id);
+                      HandleDownloade(project._id,project.projectName);
                       //,project.projectName
                     }}
                   >
