@@ -45,7 +45,7 @@ An AI-based full-stack development playground that lets you generate, run, and d
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/ai-mern-generator.git
+git clone https://github.com/Anubhav-pandey004/AI-webDeveloper_Frontend.git
 
 # Install dependencies
 cd ai-mern-generator/client
