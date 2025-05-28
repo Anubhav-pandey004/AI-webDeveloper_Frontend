@@ -13,6 +13,8 @@
 ## 🎥 Demo
 
 ![AI Project Generator Demo](./assets/demo.gif)
+<img src="public/screenshot1.png" width="600" />
+
 
 > 📸 Want more screenshots? Add them to the `assets/` folder and reference them like above!
 
