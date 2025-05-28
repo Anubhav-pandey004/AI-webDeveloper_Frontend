@@ -14,19 +14,18 @@
 
 ![AI Project Generator Demo](./assets/demo.gif)
 <div align="center">
-  <img src="public/Screenshot%202025-04-01%20201318.png" width="600" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20201344.png" width="600" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20201354.png" width="600" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20202954.png" width="600" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20203105.png" width="600" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20203124.png" width="600" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20204316.png" width="600" style="margin: 10px;" />
-  <img src="public/Screenshot%202025-04-01%20204403.png" width="600" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20201318.png" width="400" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20201344.png" width="400" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20201354.png" width="400" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20202954.png" width="400" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20203105.png" width="400" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20203124.png" width="400" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20204316.png" width="400" style="margin: 10px;" />
+  <img src="public/Screenshot%202025-04-01%20204403.png" width="400" style="margin: 10px;" />
 </div>
 
 
 
-> 📸 Want more screenshots? Add them to the `assets/` folder and reference them like above!
 
 ---
 
