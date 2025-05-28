@@ -8,7 +8,7 @@ let socketInstance = null;
 export const initializeSocket = (projectId) => {
     if (!socketInstance) {
         
-        socketInstance = socket('http://localhost:8080', {
+        socketInstance = socket('https://ai-webdeveloper-frontend.onrender.com', {
             auth: {
                 token: localStorage.getItem('token')  // or document.cookie for cookie-based tokens
             },
