@@ -9,6 +9,7 @@ export const initializeSocket = (projectId) => {
     if (!socketInstance) {
         
         socketInstance = io('https://ai-webdeveloper-backend.onrender.com', {
+            timeout: 20000,
             auth: {
                 token: localStorage.getItem('token')  // or document.cookie for cookie-based tokens
             },
@@ -19,7 +20,7 @@ export const initializeSocket = (projectId) => {
         });        
 
         socketInstance.on('connection', () => {
-             console.log("Connected to socket server");
+             console.log("Connected to socket server", socketInstance.id);
         });
 
         socketInstance.on('project-message-receive', (data) => {
