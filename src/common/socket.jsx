@@ -1,42 +1,31 @@
-import socket from 'socket.io-client';
-
+import { io } from 'socket.io-client';
 
 let socketInstance = null;
 
-//socket instance variable is now our path to send msg to backend
-//we can emmit any event
 export const initializeSocket = (projectId) => {
     if (!socketInstance) {
-        
-        socketInstance = socket('https://ai-webdeveloper-backend.onrender.com', {
+        socketInstance = io('https://ai-webdeveloper-backend.onrender.com', {
             auth: {
-                token: localStorage.getItem('token')  // or document.cookie for cookie-based tokens
+                token: localStorage.getItem('token') || ''
             },
             query: {
                 projectId
-            }
-        });        
+            },
+            transports: ['websocket'], // enforce WebSocket to avoid polling issues
+            withCredentials: true
+        });
 
-        socketInstance.on('connection', () => {
+        socketInstance.on('connect', () => {
+            console.log('Socket connected:', socketInstance.id);
+        });
 
+        socketInstance.on('connect_error', (err) => {
+            console.error('Socket connection error:', err.message);
         });
 
         socketInstance.on('project-message-receive', (data) => {
-
+            console.log('Message received:', data);
         });
     }
     return socketInstance;
 };
-
-
-//various events
-export const receiveMessage = (eventNames, cb)=>{
-    socketInstance.on(eventNames, cb);
-}
-
-export const sendMessage = (eventNames, data)=>{    
-    socketInstance.emit(eventNames, data);
-}
-
-
-
